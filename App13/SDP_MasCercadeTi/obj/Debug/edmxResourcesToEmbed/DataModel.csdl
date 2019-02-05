@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SDP_ActualizacionDatosModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="SDP_ActualizacionDatosEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="SDP_Catalogo" EntityType="SDP_ActualizacionDatosModel.SDP_Catalogo" />
+    <EntitySet Name="SDP_TipoCatalogo" EntityType="SDP_ActualizacionDatosModel.SDP_TipoCatalogo" />
+    <AssociationSet Name="FK_SDP_Catalogo_SDP_TipoCatalogo" Association="SDP_ActualizacionDatosModel.FK_SDP_Catalogo_SDP_TipoCatalogo">
+      <End Role="SDP_TipoCatalogo" EntitySet="SDP_TipoCatalogo" />
+      <End Role="SDP_Catalogo" EntitySet="SDP_Catalogo" />
+    </AssociationSet>
+    <EntitySet Name="SDP_Catalogo_VTA" EntityType="SDP_ActualizacionDatosModel.SDP_Catalogo_VTA" />
+    <EntitySet Name="SDP_MasCercadeTi" EntityType="SDP_ActualizacionDatosModel.SDP_MasCercadeTi" />
+    <EntitySet Name="SDP_Usuario" EntityType="SDP_ActualizacionDatosModel.SDP_Usuario" />
+    <FunctionImport Name="SDP_MasCercadeTi_Consulta" EntitySet="SDP_MasCercadeTi" ReturnType="Collection(SDP_ActualizacionDatosModel.SDP_MasCercadeTi)">
+      <Parameter Name="Texto" Mode="In" Type="String" />
+      <Parameter Name="Genero" Mode="In" Type="Guid" />
+      <Parameter Name="EstadoCivil" Mode="In" Type="Guid" />
+      <Parameter Name="MesNacimiento" Mode="In" Type="Int32" />
+      <Parameter Name="Ciudad" Mode="In" Type="Guid" />
+      <Parameter Name="MesAniversarioEmpresa" Mode="In" Type="Int32" />
+      <Parameter Name="Deporte" Mode="In" Type="Guid" />
+      <Parameter Name="Hincha" Mode="In" Type="Guid" />
+      <Parameter Name="GeneroCine" Mode="In" Type="Guid" />
+      <Parameter Name="ComidaFavorita" Mode="In" Type="Guid" />
+      <Parameter Name="GeneroMusical" Mode="In" Type="Guid" />
+      <Parameter Name="GeneroLiteratura" Mode="In" Type="Guid" />
+      <Parameter Name="ActividadesInteres" Mode="In" Type="Guid" />
+      <Parameter Name="TieneHijos" Mode="In" Type="Boolean" />
+    </FunctionImport>
+  </EntityContainer>
+  <EntityType Name="SDP_Catalogo">
+    <Key>
+      <PropertyRef Name="CatalogoID" />
+    </Key>
+    <Property Name="CatalogoID" Type="Guid" Nullable="false" />
+    <Property Name="TipoCatalogoID" Type="Guid" />
+    <Property Name="Nombre" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="Var1" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="Var2" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="Var3" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="Var4" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="Var5" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="Orden" Type="Int32" />
+    <Property Name="Activo" Type="Boolean" />
+    <NavigationProperty Name="SDP_TipoCatalogo" Relationship="SDP_ActualizacionDatosModel.FK_SDP_Catalogo_SDP_TipoCatalogo" FromRole="SDP_Catalogo" ToRole="SDP_TipoCatalogo" />
+  </EntityType>
+  <EntityType Name="SDP_TipoCatalogo">
+    <Key>
+      <PropertyRef Name="TipoCatalogoID" />
+    </Key>
+    <Property Name="TipoCatalogoID" Type="Guid" Nullable="false" />
+    <Property Name="Nombre" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="SDP_Catalogo" Relationship="SDP_ActualizacionDatosModel.FK_SDP_Catalogo_SDP_TipoCatalogo" FromRole="SDP_TipoCatalogo" ToRole="SDP_Catalogo" />
+  </EntityType>
+  <Association Name="FK_SDP_Catalogo_SDP_TipoCatalogo">
+    <End Role="SDP_TipoCatalogo" Type="SDP_ActualizacionDatosModel.SDP_TipoCatalogo" Multiplicity="0..1" />
+    <End Role="SDP_Catalogo" Type="SDP_ActualizacionDatosModel.SDP_Catalogo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SDP_TipoCatalogo">
+        <PropertyRef Name="TipoCatalogoID" />
+      </Principal>
+      <Dependent Role="SDP_Catalogo">
+        <PropertyRef Name="TipoCatalogoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="SDP_Catalogo_VTA">
+    <Key>
+      <PropertyRef Name="CatalogoID" />
+    </Key>
+    <Property Type="Guid" Name="CatalogoID" Nullable="false" />
+    <Property Type="Guid" Name="TipoCatalogoID" />
+    <Property Type="String" Name="Nombre" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Var1" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Var2" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Var3" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Var4" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Var5" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Orden" />
+    <Property Type="Boolean" Name="Activo" />
+    <Property Type="String" Name="TipoCatalogo" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="SDP_MasCercadeTi">
+    <Key>
+      <PropertyRef Name="RegistroID" />
+    </Key>
+    <Property Type="Guid" Name="RegistroID" Nullable="false" />
+    <Property Type="DateTime" Name="FechaRegistro" />
+    <Property Type="DateTime" Name="FechaActualizacion" />
+    <Property Type="Guid" Name="UsuarioRegistro" />
+    <Property Type="Guid" Name="UsuarioActualizacion" />
+    <Property Type="String" Name="Nombres" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Apellidos" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Identificacion" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Guid" Name="Sexo" />
+    <Property Type="String" Name="SexoNombre" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="FechaNacimiento" />
+    <Property Type="Guid" Name="EstadoCivil" />
+    <Property Type="String" Name="EstadoCivilNombre" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Telefono" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Celular" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="EmailLaboral" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="EmailPersonal" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Empresa" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Direccion" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="Guid" Name="Ciudad" />
+    <Property Type="String" Name="CiudadNombre" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Cargo" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="AniversarioEmpresa" />
+    <Property Type="Guid" Name="Deporte" />
+    <Property Type="String" Name="DeporteNombre" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="Guid" Name="ActividadesInteres" />
+    <Property Type="String" Name="ActividadesInteresNombre" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="Guid" Name="Hincha" />
+    <Property Type="String" Name="HinchaNombre" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="Guid" Name="GeneroMusical" />
+    <Property Type="String" Name="GeneroMusicalNombre" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="Guid" Name="GeneroCine" />
+    <Property Type="String" Name="GeneroCineNombre" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="Guid" Name="GeneroLiteratura" />
+    <Property Type="String" Name="GeneroLiteraturaNombre" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="Guid" Name="ComidaFavorita" />
+    <Property Type="String" Name="ComidaFavoritaNombre" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="NacimientoConyuge" />
+    <Property Type="DateTime" Name="FechaAniversario" />
+    <Property Type="Int32" Name="NumeroHijos" />
+    <Property Type="Guid" Name="SexoHijo1" />
+    <Property Type="String" Name="SexoHijo1Nombre" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="FechaHijo1" />
+    <Property Type="Guid" Name="SexoHijo2" />
+    <Property Type="String" Name="SexoHijo2Nombre" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="FechaHijo2" />
+    <Property Type="Guid" Name="SexoHijo3" />
+    <Property Type="String" Name="SexoHijo3Nombre" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="FechaHijo3" />
+    <Property Type="Guid" Name="SexoHijo4" />
+    <Property Type="String" Name="SexoHijo4Nombre" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="FechaHijo4" />
+    <Property Type="Guid" Name="SexoHijo5" />
+    <Property Type="String" Name="SexoHijo5Nombre" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="FechaHijo5" />
+    <Property Type="Guid" Name="SexoHijo6" />
+    <Property Type="String" Name="SexoHijo6Nombre" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="FechaHijo6" />
+    <Property Type="Guid" Name="SexoHijo7" />
+    <Property Type="String" Name="SexoHijo7Nombre" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="FechaHijo7" />
+    <Property Type="Guid" Name="SexoHijo8" />
+    <Property Type="String" Name="SexoHijo8Nombre" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="FechaHijo8" />
+    <Property Type="Guid" Name="SexoHijo9" />
+    <Property Type="String" Name="SexoHijo9Nombre" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="FechaHijo9" />
+    <Property Type="Guid" Name="SexoHijo10" />
+    <Property Type="String" Name="SexoHijo10Nombre" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="FechaHijo10" />
+  </EntityType>
+  <EntityType Name="SDP_Usuario">
+    <Key>
+      <PropertyRef Name="UsuarioID" />
+    </Key>
+    <Property Type="Guid" Name="UsuarioID" Nullable="false" />
+    <Property Type="String" Name="Nombre" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Username" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Password" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

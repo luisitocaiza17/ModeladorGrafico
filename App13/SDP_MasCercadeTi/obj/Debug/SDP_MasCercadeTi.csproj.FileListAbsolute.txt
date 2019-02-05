@@ -1,0 +1,15 @@
+E:\workspace\SDP_ActualizacionDatos\1. Development\App13\SDP_MasCercadeTi\bin\SDP_MasCercadeTi.dll
+E:\workspace\SDP_ActualizacionDatos\1. Development\App13\SDP_MasCercadeTi\bin\SDP_MasCercadeTi.pdb
+E:\workspace\SDP_ActualizacionDatos\1. Development\App13\SDP_MasCercadeTi\obj\Debug\SDP_MasCercadeTi.dll
+E:\workspace\SDP_ActualizacionDatos\1. Development\App13\SDP_MasCercadeTi\obj\Debug\SDP_MasCercadeTi.pdb
+D:\workspace\SDP_ActualizacionDatos\1. Development\App13\SDP_MasCercadeTi\bin\SDP_MasCercadeTi.dll
+D:\workspace\SDP_ActualizacionDatos\1. Development\App13\SDP_MasCercadeTi\bin\SDP_MasCercadeTi.pdb
+D:\workspace\SDP_ActualizacionDatos\1. Development\App13\SDP_MasCercadeTi\bin\ClosedXML.dll
+D:\workspace\SDP_ActualizacionDatos\1. Development\App13\SDP_MasCercadeTi\bin\DocumentFormat.OpenXml.dll
+D:\workspace\SDP_ActualizacionDatos\1. Development\App13\SDP_MasCercadeTi\bin\Telerik.Web.UI.dll
+D:\workspace\SDP_ActualizacionDatos\1. Development\App13\SDP_MasCercadeTi\bin\ClosedXML.pdb
+D:\workspace\SDP_ActualizacionDatos\1. Development\App13\SDP_MasCercadeTi\bin\Telerik.Web.UI.xml
+D:\workspace\SDP_ActualizacionDatos\1. Development\App13\SDP_MasCercadeTi\obj\Debug\SDP_MasCercadeTi.csprojResolveAssemblyReference.cache
+D:\workspace\SDP_ActualizacionDatos\1. Development\App13\SDP_MasCercadeTi\obj\Debug\SDP_MasCercadeTi.dll.licenses
+D:\workspace\SDP_ActualizacionDatos\1. Development\App13\SDP_MasCercadeTi\obj\Debug\SDP_MasCercadeTi.dll
+D:\workspace\SDP_ActualizacionDatos\1. Development\App13\SDP_MasCercadeTi\obj\Debug\SDP_MasCercadeTi.pdb

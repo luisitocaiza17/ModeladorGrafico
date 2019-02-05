@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SDP_ActualizacionDatosModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="SDP_ActualizacionDatosModelStoreContainer">
+    <EntitySet Name="SDP_Catalogo" EntityType="SDP_ActualizacionDatosModel.Store.SDP_Catalogo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SDP_MasCercadeTi" EntityType="SDP_ActualizacionDatosModel.Store.SDP_MasCercadeTi" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SDP_TipoCatalogo" EntityType="SDP_ActualizacionDatosModel.Store.SDP_TipoCatalogo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SDP_Usuario" EntityType="SDP_ActualizacionDatosModel.Store.SDP_Usuario" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SDP_Catalogo_VTA" EntityType="SDP_ActualizacionDatosModel.Store.SDP_Catalogo_VTA" store:Type="Views" store:Schema="dbo" store:Name="SDP_Catalogo_VTA">
+      <DefiningQuery>SELECT 
+      [SDP_Catalogo_VTA].[CatalogoID] AS [CatalogoID], 
+      [SDP_Catalogo_VTA].[TipoCatalogoID] AS [TipoCatalogoID], 
+      [SDP_Catalogo_VTA].[Nombre] AS [Nombre], 
+      [SDP_Catalogo_VTA].[Var1] AS [Var1], 
+      [SDP_Catalogo_VTA].[Var2] AS [Var2], 
+      [SDP_Catalogo_VTA].[Var3] AS [Var3], 
+      [SDP_Catalogo_VTA].[Var4] AS [Var4], 
+      [SDP_Catalogo_VTA].[Var5] AS [Var5], 
+      [SDP_Catalogo_VTA].[Orden] AS [Orden], 
+      [SDP_Catalogo_VTA].[Activo] AS [Activo], 
+      [SDP_Catalogo_VTA].[TipoCatalogo] AS [TipoCatalogo]
+      FROM [dbo].[SDP_Catalogo_VTA] AS [SDP_Catalogo_VTA]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_SDP_Catalogo_SDP_TipoCatalogo" Association="SDP_ActualizacionDatosModel.Store.FK_SDP_Catalogo_SDP_TipoCatalogo">
+      <End Role="SDP_TipoCatalogo" EntitySet="SDP_TipoCatalogo" />
+      <End Role="SDP_Catalogo" EntitySet="SDP_Catalogo" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="SDP_Catalogo">
+    <Key>
+      <PropertyRef Name="CatalogoID" />
+    </Key>
+    <Property Name="CatalogoID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TipoCatalogoID" Type="uniqueidentifier" />
+    <Property Name="Nombre" Type="varchar" MaxLength="500" />
+    <Property Name="Var1" Type="varchar" MaxLength="500" />
+    <Property Name="Var2" Type="varchar" MaxLength="500" />
+    <Property Name="Var3" Type="varchar" MaxLength="500" />
+    <Property Name="Var4" Type="varchar" MaxLength="500" />
+    <Property Name="Var5" Type="varchar" MaxLength="500" />
+    <Property Name="Orden" Type="int" />
+    <Property Name="Activo" Type="bit" />
+  </EntityType>
+  <EntityType Name="SDP_MasCercadeTi">
+    <Key>
+      <PropertyRef Name="RegistroID" />
+    </Key>
+    <Property Name="RegistroID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="FechaRegistro" Type="datetime" />
+    <Property Name="FechaActualizacion" Type="datetime" />
+    <Property Name="UsuarioRegistro" Type="uniqueidentifier" />
+    <Property Name="UsuarioActualizacion" Type="uniqueidentifier" />
+    <Property Name="Nombres" Type="varchar" MaxLength="500" />
+    <Property Name="Apellidos" Type="varchar" MaxLength="500" />
+    <Property Name="Identificacion" Type="varchar" MaxLength="100" />
+    <Property Name="Sexo" Type="uniqueidentifier" />
+    <Property Name="SexoNombre" Type="varchar" MaxLength="500" />
+    <Property Name="FechaNacimiento" Type="datetime" />
+    <Property Name="EstadoCivil" Type="uniqueidentifier" />
+    <Property Name="EstadoCivilNombre" Type="varchar" MaxLength="500" />
+    <Property Name="Telefono" Type="varchar" MaxLength="100" />
+    <Property Name="Celular" Type="varchar" MaxLength="100" />
+    <Property Name="EmailLaboral" Type="varchar" MaxLength="100" />
+    <Property Name="EmailPersonal" Type="varchar" MaxLength="100" />
+    <Property Name="Empresa" Type="varchar" MaxLength="500" />
+    <Property Name="Direccion" Type="varchar" MaxLength="500" />
+    <Property Name="Ciudad" Type="uniqueidentifier" />
+    <Property Name="CiudadNombre" Type="varchar" MaxLength="500" />
+    <Property Name="Cargo" Type="varchar" MaxLength="100" />
+    <Property Name="AniversarioEmpresa" Type="datetime" />
+    <Property Name="Deporte" Type="uniqueidentifier" />
+    <Property Name="DeporteNombre" Type="varchar" MaxLength="500" />
+    <Property Name="ActividadesInteres" Type="uniqueidentifier" />
+    <Property Name="ActividadesInteresNombre" Type="varchar" MaxLength="500" />
+    <Property Name="Hincha" Type="uniqueidentifier" />
+    <Property Name="HinchaNombre" Type="varchar" MaxLength="500" />
+    <Property Name="GeneroMusical" Type="uniqueidentifier" />
+    <Property Name="GeneroMusicalNombre" Type="varchar" MaxLength="500" />
+    <Property Name="GeneroCine" Type="uniqueidentifier" />
+    <Property Name="GeneroCineNombre" Type="varchar" MaxLength="500" />
+    <Property Name="GeneroLiteratura" Type="uniqueidentifier" />
+    <Property Name="GeneroLiteraturaNombre" Type="varchar" MaxLength="500" />
+    <Property Name="ComidaFavorita" Type="uniqueidentifier" />
+    <Property Name="ComidaFavoritaNombre" Type="varchar" MaxLength="500" />
+    <Property Name="NacimientoConyuge" Type="datetime" />
+    <Property Name="FechaAniversario" Type="datetime" />
+    <Property Name="NumeroHijos" Type="int" />
+    <Property Name="SexoHijo1" Type="uniqueidentifier" />
+    <Property Name="SexoHijo1Nombre" Type="varchar" MaxLength="500" />
+    <Property Name="FechaHijo1" Type="datetime" />
+    <Property Name="SexoHijo2" Type="uniqueidentifier" />
+    <Property Name="SexoHijo2Nombre" Type="varchar" MaxLength="500" />
+    <Property Name="FechaHijo2" Type="datetime" />
+    <Property Name="SexoHijo3" Type="uniqueidentifier" />
+    <Property Name="SexoHijo3Nombre" Type="varchar" MaxLength="500" />
+    <Property Name="FechaHijo3" Type="datetime" />
+    <Property Name="SexoHijo4" Type="uniqueidentifier" />
+    <Property Name="SexoHijo4Nombre" Type="varchar" MaxLength="500" />
+    <Property Name="FechaHijo4" Type="datetime" />
+    <Property Name="SexoHijo5" Type="uniqueidentifier" />
+    <Property Name="SexoHijo5Nombre" Type="varchar" MaxLength="500" />
+    <Property Name="FechaHijo5" Type="datetime" />
+    <Property Name="SexoHijo6" Type="uniqueidentifier" />
+    <Property Name="SexoHijo6Nombre" Type="varchar" MaxLength="500" />
+    <Property Name="FechaHijo6" Type="datetime" />
+    <Property Name="SexoHijo7" Type="uniqueidentifier" />
+    <Property Name="SexoHijo7Nombre" Type="varchar" MaxLength="500" />
+    <Property Name="FechaHijo7" Type="datetime" />
+    <Property Name="SexoHijo8" Type="uniqueidentifier" />
+    <Property Name="SexoHijo8Nombre" Type="varchar" MaxLength="500" />
+    <Property Name="FechaHijo8" Type="datetime" />
+    <Property Name="SexoHijo9" Type="uniqueidentifier" />
+    <Property Name="SexoHijo9Nombre" Type="varchar" MaxLength="500" />
+    <Property Name="FechaHijo9" Type="datetime" />
+    <Property Name="SexoHijo10" Type="uniqueidentifier" />
+    <Property Name="SexoHijo10Nombre" Type="varchar" MaxLength="500" />
+    <Property Name="FechaHijo10" Type="datetime" />
+  </EntityType>
+  <EntityType Name="SDP_TipoCatalogo">
+    <Key>
+      <PropertyRef Name="TipoCatalogoID" />
+    </Key>
+    <Property Name="TipoCatalogoID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="SDP_Usuario">
+    <Key>
+      <PropertyRef Name="UsuarioID" />
+    </Key>
+    <Property Name="UsuarioID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="500" />
+    <Property Name="Username" Type="varchar" MaxLength="100" />
+    <Property Name="Password" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'SDP_ActualizacionDatos.dbo.SDP_Catalogo_VTA' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="SDP_Catalogo_VTA">
+    <Key>
+      <PropertyRef Name="CatalogoID" />
+    </Key>
+    <Property Name="CatalogoID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TipoCatalogoID" Type="uniqueidentifier" />
+    <Property Name="Nombre" Type="varchar" MaxLength="500" />
+    <Property Name="Var1" Type="varchar" MaxLength="500" />
+    <Property Name="Var2" Type="varchar" MaxLength="500" />
+    <Property Name="Var3" Type="varchar" MaxLength="500" />
+    <Property Name="Var4" Type="varchar" MaxLength="500" />
+    <Property Name="Var5" Type="varchar" MaxLength="500" />
+    <Property Name="Orden" Type="int" />
+    <Property Name="Activo" Type="bit" />
+    <Property Name="TipoCatalogo" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <Association Name="FK_SDP_Catalogo_SDP_TipoCatalogo">
+    <End Role="SDP_TipoCatalogo" Type="SDP_ActualizacionDatosModel.Store.SDP_TipoCatalogo" Multiplicity="0..1" />
+    <End Role="SDP_Catalogo" Type="SDP_ActualizacionDatosModel.Store.SDP_Catalogo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SDP_TipoCatalogo">
+        <PropertyRef Name="TipoCatalogoID" />
+      </Principal>
+      <Dependent Role="SDP_Catalogo">
+        <PropertyRef Name="TipoCatalogoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="SDP_MasCercadeTi_Consulta" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Texto" Type="varchar" Mode="In" />
+    <Parameter Name="Genero" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="EstadoCivil" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="MesNacimiento" Type="int" Mode="In" />
+    <Parameter Name="Ciudad" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="MesAniversarioEmpresa" Type="int" Mode="In" />
+    <Parameter Name="Deporte" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="Hincha" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="GeneroCine" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="ComidaFavorita" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="GeneroMusical" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="GeneroLiteratura" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="ActividadesInteres" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="TieneHijos" Type="bit" Mode="In" />
+  </Function>
+</Schema>

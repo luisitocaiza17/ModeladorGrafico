@@ -1,0 +1,1252 @@
+﻿html
+{
+    margin: 0px auto;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+}
+
+body
+{
+    background: #F3F3F3;
+    font-family: 'Open Sans', sans-serif, Arial;
+    margin: 0px;
+    padding: 0px;
+    color: #999999;
+}
+select::-ms-expand { display: none; }
+
+.selectazul
+{
+    border: 0 !important;  /*Removes border*/
+    -webkit-appearance: none;  /*Removes default chrome and safari style*/
+    -moz-appearance: none; /* Removes Default Firefox style*/
+    background: url('../images/img_comboazul.png') no-repeat;  /*Adds background-image*/
+    background-position: 100% 0px;  /*Position of the background-image*/
+    /*width: 100px; Width of select dropdown to give space for arrow image*/
+    text-indent: 0.01px; /* Removes default arrow from firefox*/
+    text-overflow: "";  /*Removes default arrow from firefox*/
+    font-size:14px;
+}
+.selectazul option {
+  padding: 0;
+  margin: 0;
+} 
+
+.selectrojo
+{
+    border: 0 !important;  /*Removes border*/
+    -webkit-appearance: none;  /*Removes default chrome and safari style*/
+    -moz-appearance: none; /* Removes Default Firefox style*/
+    background: url('../images/img_comborojo.png') no-repeat;  /*Adds background-image*/
+    background-position: 100% 0px;  /*Position of the background-image*/
+    /*width: 100px; Width of select dropdown to give space for arrow image*/
+    text-indent: 0.01px; /* Removes default arrow from firefox*/
+    text-overflow: "";  /*Removes default arrow from firefox*/
+    font-size:14px;
+}
+
+.selectverde
+{
+    border: 0 !important;  /*Removes border*/
+    -webkit-appearance: none;  /*Removes default chrome and safari style*/
+    -moz-appearance: none; /* Removes Default Firefox style*/
+    background: url('../images/img_comboverde.png') no-repeat;  /*Adds background-image*/
+    background-position: 100% 0px;  /*Position of the background-image*/
+    /*width: 100px; Width of select dropdown to give space for arrow image*/
+    text-indent: 0.01px; /* Removes default arrow from firefox*/
+    text-overflow: "";  /*Removes default arrow from firefox*/
+    font-size:14px;
+}
+
+.selectazul2
+{
+    border: 0 !important;  /*Removes border*/
+    -webkit-appearance: none;  /*Removes default chrome and safari style*/
+    -moz-appearance: none; /* Removes Default Firefox style*/
+    background: url('../images/img_comboazul2.png') no-repeat;  /*Adds background-image*/
+    background-position: 100% 0px;  /*Position of the background-image*/
+    /*width: 100px; Width of select dropdown to give space for arrow image*/
+    text-indent: 0.01px; /* Removes default arrow from firefox*/
+    text-overflow: "";  /*Removes default arrow from firefox*/
+    font-size:14px;
+}
+
+#menu_home
+{
+    background-image: url(../images/pMenu.png);
+    background-repeat:no-repeat;
+    background-color: #FFFFFF;
+}
+
+#menu_home:hover
+{
+    background-image: url(../images/pMenu_Over.png);
+    background-repeat:no-repeat;
+    background-color: #0099FF;
+}
+
+#menu_consulta
+{
+    background-image: url(../images/pMenu2.png);
+    background-repeat:no-repeat;
+    background-color: #FFFFFF;
+}
+
+#menu_consulta:hover
+{
+    background-image: url(../images/pMenu2_Over.png);
+    background-repeat:no-repeat;
+    background-color: #0099FF;
+}
+
+#menu_nuevo
+{
+    background-image: url(../images/pMenu3.png);
+    background-repeat:no-repeat;
+    background-color: #FFFFFF;
+}
+
+#menu_nuevo:hover
+{
+    background-image: url(../images/pMenu3_Over.png);
+    background-repeat:no-repeat;
+    background-color: #0099FF;
+}
+
+#menu_cumpleanos
+{
+    background-image: url(../images/pMenu4.png);
+    background-repeat:no-repeat;
+    background-color: #FFFFFF;
+}
+
+#menu_cumpleanos:hover
+{
+    background-image: url(../images/pMenu4_Over.png);
+    background-repeat:no-repeat;
+    background-color: #0099FF;
+}
+
+#menu_regalos
+{
+    background-image: url(../images/pMenu5.png);
+    background-repeat:no-repeat;
+    background-color: #FFFFFF;
+}
+
+#menu_regalos:hover
+{
+    background-image: url(../images/pMenu5_Over.png);
+    background-repeat:no-repeat;
+    background-color: #0099FF;
+}
+
+#menu_eventos
+{
+    background-image: url(../images/pMenu6.png);
+    background-repeat:no-repeat;
+    background-color: #FFFFFF;
+}
+
+#menu_eventos:hover
+{
+    background-image: url(../images/pMenu6_Over.png);
+    background-repeat:no-repeat;
+    background-color: #0099FF;
+}
+
+#fondo
+{
+    width: 70%;
+    min-width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #FFFFFF;
+    margin-bottom: 10px;
+}
+
+#fondoancho
+{
+    width: 80%;
+    min-width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #FFFFFF;
+    margin-bottom: 10px;
+}
+
+#logo
+{
+    width: 100%;
+    display: block;
+    padding-top: 15px;
+}
+
+#imglogo
+{
+    background-image: url(../images/logo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 281px;
+    height: 46px;
+    display: block;
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+#imgPersonal
+{
+    background-image: url(../images/tpersonal.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 229px;
+    height: 45px;
+    display: block;
+    margin-left: 20px;
+    margin-right: 20px;personal
+}
+
+#imgPersonalM
+{
+    background-image: url(../images/tpersonal.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 229px;
+    height: 45px;
+    display: block;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+ #imgLaboralM
+{
+    background-image: url(../images/laboral.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 218px;
+    height: 45px;
+    display: block;
+    margin-left: 10px;
+    margin-right: 20px;
+} 
+
+ #imgEstiloVidaM
+{
+    background-image: url(../images/estiloVida.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 251px;
+    height: 45px;
+    display: block;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+#imgFamiliaM
+{
+    background-image: url(../images/familia.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 187px;
+    height: 45px;
+    display: block;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+#imgContactoM
+    {
+        background-image: url(../images/contacto.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 242px;
+        height: 45px;
+        display: block;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+#imgCercaDeTi
+{
+    background-image: url(../images/cercaDeTi.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 320px;
+    height: 60px;
+    display: block;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#imgContacto
+{
+    background-image: url(../images/contacto.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 242px;
+    height: 45px;
+    display: block;
+    margin-left: 20px;
+    margin-right: 20px;
+ } 
+ 
+ #imgLaboral
+{
+    background-image: url(../images/laboral.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 218px;
+    height: 45px;
+    display: block;
+    margin-left: 20px;
+    margin-right: 20px;
+ } 
+ 
+#imgEstiloVida
+{
+    background-image: url(../images/estiloVida.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 251px;
+    height: 45px;
+    display: block;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#imgFamilia
+{
+    background-image: url(../images/familia.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 187px;
+    height: 45px;
+    display: block;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#titulo
+{
+    margin-left: 10%;
+    margin-top: 10px;
+}
+
+#imgtitulo
+{
+    background-image: url(../images/titulo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 222px;
+    height: 43px;
+    display: block;
+}
+
+#flecha
+{
+    background-image: url(../images/flecha.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 28px;
+    display: block;
+}
+
+#consulta
+{
+    background-image: url(../images/consulta.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    margin-left: 5px;
+    width: 200px;
+    height: 61px;
+    display: block;
+}
+
+#resultadoConsulta
+{
+    background-image: url(../images/resultadoConsulta.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 5px;
+    width: 400px;
+    height: 62px;
+    display: block;
+}
+
+#btn_Descarga
+{
+    background-image: url(../images/descarga.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 25px;
+    margin-right: 20px;
+    width: 60px;
+    height: 70px;
+    display: block;
+    padding: 5px 20px 5px 20px;
+    background-color: #FF6666;
+}
+
+#btn_Descarga:hover
+{
+    background-color: #0099FF;
+    background-image: url(../images/descarga.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 25px;
+    margin-right: 20px;
+    width: 60px;
+    height: 70px;
+    display: block;
+    padding: 5px 20px 5px 20px;
+}
+
+#btn_Guardar
+{
+    background-image: url(../images/guardar.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+    background-color: #FF6666;
+}
+
+#btn_Guardar:hover
+{
+    background-color: #0099FF;
+    background-image: url(../images/guardar.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+}
+
+#lupa
+{
+    background-image: url(../images/lupa.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 30px;
+    display: block;
+}
+
+#guardar
+{
+    background-image: url(../images/guardar.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 80px;
+    height: 60px;
+    display: block;
+}
+
+#save
+{
+    background-image: url(../images/save.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 90px;
+    height: 60px;
+    display: block;
+}
+
+#usuario
+{
+    background-image: url(../images/usuario.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin-left: 30px;
+    margin-right: 100px;
+}
+
+#candando
+{
+    background-image: url(../images/candado.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 55px;
+    height: 65px;
+    display: block;
+    margin-left: 30px;
+    margin-right: 100px;
+}
+
+#cliente
+{
+    background-image: url(../images/cliente.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 55px;
+    height: 65px;
+    display: block;
+    margin-left: 30px;
+    margin-right: 100px;
+}
+
+#pie
+{
+    width: 70%;
+    min-width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 25px;
+    background: #006699;
+}
+
+#saltoLinea 
+{
+    height: 45px;
+}
+
+#tituloLogeo
+{   
+    display: table;
+    color:#42BAB2;
+    height: 40px;
+    text-align: center;
+    text-indent: 15px;
+    font-size:x-large;
+}
+
+#tituloLogeo2
+{   
+    display: table;
+    color:#ED6B64;
+    height: 40px;
+    text-align: center;
+    text-indent: 15px;
+    font-size:xx-large;
+}
+
+#imgflecha
+{   
+    background-image: url(../images/flecha_small.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 35px;
+    height: 30px;
+    display: block;
+}
+
+#btn_Consulta
+{
+    background-image: url(../images/mConsulta.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+}
+#btn_Consulta:hover
+{
+    background-color: #0099FF;
+    background-image: url(../images/mConsulta.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+}
+
+#btn_IngresarNuevo
+{
+    background-image: url(../images/mNuevo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+}
+
+#btn_IngresarNuevo:hover
+{
+    background-color: #0099FF;
+    background-image: url(../images/mNuevo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+}
+
+#btn_Cumpleanios
+{
+    background-image: url(../images/mCumpleanios.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+}
+#btn_Cumpleanios:hover
+{
+    background-color: #0099FF;
+    background-image: url(../images/mCumpleanios.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+}
+
+#btn_Navidad
+{
+    background-image: url(../images/mNavidad.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+}
+
+#btn_Navidad:hover
+{
+    background-color: #0099FF;
+    background-image: url(../images/mNavidad.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+}
+#btn_Eventos
+{
+    background-image: url(../images/mEvento.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+}
+#btn_Eventos:hover
+{
+    background-color: #0099FF;
+    background-image: url(../images/mEvento.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+}
+
+#btn_registrar
+{
+    background-image: url(../images/siguiente.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 340px;
+    height: 42px;
+    display: block;
+    padding-top: 10px;
+    padding-bottom:10px;
+}
+#btn_registrar:hover
+{
+    background-color: #0099FF;
+    background-image: url(../images/siguiente.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 340px;
+    height: 42px;
+    display: block;
+    padding-top: 10px;
+    padding-bottom:10px;
+}
+
+#btn_Ingresar
+{
+    background-image: url(../images/ingresar.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 340px;
+    height: 42px;
+    display: block;
+    margin-left: 5px;
+    margin-right: 10px;
+}
+#btn_Ingresar:hover
+{
+    background-color: #0099FF;
+    background-image: url(../images/ingresar.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 340px;
+    height: 42px;
+    display: block;
+    margin-left: 5px;
+    margin-right: 10px;
+}
+
+#btn_Buscar
+{
+    background-image: url(../images/Buscar.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#btn_Buscar:hover
+{
+    background-color: #0099FF;
+    background-image: url(../images/Buscar.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#espacioCandado
+{   
+     height: 60px;
+}
+
+#btn_Enviar
+{
+    background-image: url(../images/btn_EnviarInformacion.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#btn_Enviar:hover
+{
+    background-image: url(../images/btn_EnviarInformacion_Over.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.item
+{
+    background-color: #CCCCCC;
+    margin-bottom: 15px;
+    color:#000000;
+    padding: 10px 10px 10px 10px;
+}
+
+.itemsubtitle
+{
+    font-weight:bold;
+}
+
+@media (max-width: 640px)
+{
+    #fondo
+    {
+        width: 80%;
+        min-width: 250px;
+        margin-left: auto;
+        margin-right: auto;
+        background: #FFFFFF;
+        margin-bottom: 10px;
+    }
+
+    #logo
+    {
+        width: 95%;
+        margin-left: auto;
+        margin-right: 0;
+        margin-top: 15px;
+    }
+
+    #imglogo
+    {
+        background-image: url(../images/logo_small.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 174px;
+        height: 29px;
+        display: block;
+    }
+
+    #titulo
+    {
+        margin-left: 10%;
+        margin-top: 10px;
+    }
+
+    #imgtitulo
+    {
+        background-image: url(../images/titulo_small.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 127px;
+        height: 25px;
+        display: block;
+    }
+
+     #imgCercaDeTi
+    {
+        background-image: url(../images/cercaDeTi_small.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 200px;
+        height: 40px;
+        display: block;
+    }
+
+    #pie
+    {
+        width: 80%;
+        min-width: 250px;
+        margin-left: auto;
+        margin-right: auto;
+        height: 25px;
+        background: #006699;
+    } 
+    
+   
+    #consulta
+    {
+        background-image: url(../images/consulta_small.png);
+        background-position: right;
+        background-repeat: no-repeat;
+        width: 120px;
+        height: 41px;
+        display: block;
+    }
+    
+    #resultadoConsulta
+    {
+        background-image: url(../images/resultadoConsulta_small.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        margin-left: 5px;
+        width: 201px;
+        height: 41px;
+        display: block;
+    }
+    
+    #flecha
+    {
+        background-image: url(../images/flecha_small.png);
+        background-position: right;
+        background-repeat: no-repeat;
+        width: 220px;
+        height: 20px;
+        display: block;
+    }
+    
+    #descarga
+    {
+        background-image: url(../images/descarga_small.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        margin-left: 5px;
+        width: 30px;
+        height: 36px;
+        display: block;
+        margin-left: 40%;
+    }
+    #lupa
+    {
+        background-image: url(../images/lupa_small.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 25px;
+        height: 25px;
+        display: block;
+    }
+    #guardar
+    {
+        background-image: url(../images/guardar_small.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 35px;
+        height: 35px;
+        display: block;
+        margin-left: 40%;
+    }
+    
+    #save
+    {
+        background-image: url(../images/save_small.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 35px;
+        height: 35px;
+        display: block;
+    }
+    
+    #cliente
+    {
+        background-image: url(../images/cliente_small.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 41px;
+        height: 46px;
+        display: block;
+        margin-left: 40%;
+    }
+    
+    #usuario
+    {
+        background-image: url(../images/usuario_small.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 70px;
+        height: 70px;
+        display: block;
+        margin-left: 40%;        
+    }
+    
+    #candando
+    {
+        background-image: url(../images/candado_small.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 41px;
+        height: 46px;
+        display: block;
+        margin-left: 40%;
+    }
+    
+    #saltoLinea 
+    {
+        height: 15px;
+    }
+    
+    #tituloLogeo
+    {   
+        display: table;
+        color:#42BAB2;
+        height: 30px;
+        text-align: center;
+        text-indent: 15px;
+        font-size:medium;
+    }
+    
+    #imgMConsulta
+    {
+        background-image: url(../images/mConsulta_small.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 180px;
+        height: 45px;
+        display: block;       
+    }
+    
+     #imgMNuevo
+    {
+        background-image: url(../images/mNuevo_small.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 180px;
+        height: 45px;
+        display: block;       
+    }
+    
+    #imgMCumpleanios
+    {
+        background-image: url(../images/mCumpleanios_small.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 180px;
+        height: 45px;
+        display: block;       
+    }
+    
+     #imgMNavidad
+    {
+        background-image: url(../images/mNavidad_small.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 180px;
+        height: 45px;
+        display: block;       
+    }
+    
+    #imgMEvento
+    {
+        background-image: url(../images/mEvento_small.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 180px;
+        height: 45px;
+        display: block;       
+    }
+    
+    #imgMSiguiente
+    {
+        background-image: url(../images/siguiente_small3.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 180px;
+        height: 40px;
+        display: block;
+    }
+    
+    #imgMSiguiente2
+    {
+        background-image: url(../images/siguiente_small3.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 180px;
+        height: 40px;
+        display: block;
+    }
+    
+    #tituloLogeo2
+    {   
+        display: table;
+        color:#ED6B64;
+        height: 30px;
+        text-align: center;
+        text-indent: 55px;
+        font-size:medium;
+    }
+    #espacioCandado
+    {   
+         height: 10px;
+    }
+}
+
+
+@media (max-width: 1280px)
+{
+    #guardar
+    {
+        background-image: url(../images/guardar_small.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 60px;
+        height: 60px;
+        display: block;
+        margin-left: 40%;
+    }
+    
+    #save
+    {
+        background-image: url(../images/save_small.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 35px;
+        height: 60px;
+        display: block;
+        margin-left: 40%;
+    }
+    
+    #descarga
+    {
+       margin-left: 40%;
+    }
+    
+    #usuario
+    {
+        background-image: url(../images/usuario_small.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 70px;
+        height: 100px;
+        display: block;
+        margin-left: 40%;
+    }
+    
+    #espacioCandado
+    {   
+         height: 10px;
+    }
+    
+    #cliente
+    {
+        background-image: url(../images/cliente_small.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 41px;
+        height: 46px;
+        display: block;       
+    }
+    
+    #candando
+    {
+        background-image: url(../images/candado_small.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 41px;
+        height: 46px;
+        display: block;       
+    }
+    
+    #imgMSiguiente
+    {
+        background-image: url(../images/siguiente_small3.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 180px;
+        height: 40px;
+        display: block;
+    }
+    
+    #imgMSiguiente2
+    {
+        background-image: url(../images/siguiente_small3.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 180px;
+        height: 40px;
+        display: block;
+    }
+}
+
+/*class name*/
+.personal 
+{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #0099CC;
+}
+.personalDetalle 
+{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #FFFFFF;
+}
+.contacto 
+{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #33CC99;
+}
+.laboral 
+{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #FF6666;
+}
+.estiloVida 
+{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #CCCC66;
+}
+.naranja {
+    background-color: #FBB771;
+}
+.familia 
+{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #6699CC;
+    color:#FFFFFF;
+}
+.detalle {
+    background-color: #0071BC; 
+    color:#FFFFFF;  
+}
+.colorVerde 
+{
+    background-color: #42BAB2;
+    color:#FFFFFF;
+}
+.colorNaranja {
+    background-color: #FBB771;
+    color:#FFFFFF;
+}
+.colorRojo {
+    background-color: #ED6B64;
+    color:#FFFFFF;
+}
+.colorCeleste {
+    background-color: #5BCBF5;
+    color:#FFFFFF;
+}
+.colorVerdeOscuro {
+    background-color: #42BAB2;
+    color:#FFFFFF;
+}
+.colorVerdeClaro {
+    background-color: #B4CF64;
+    color:#FFFFFF;
+}
+
+.txtSangria
+{
+    margin-left: 15%;
+    margin-right: 15%;
+}
+.txttitulo
+{
+    text-indent: 2%;
+    height: 60px;
+    color:#FFFFFF;
+    font-size:x-large;
+    display:flex;
+    align-items: center;
+}
+.literal
+{   
+    display: table;
+    color:White;
+    height: 50px;
+    text-align: center;
+    text-indent: 15px;
+    font-size:medium;
+}
+
+.literalM
+{   
+    display: table;
+    color:White;
+    height: 40px;
+    text-align: center;
+    text-indent: 15px;
+    font-size:medium;
+}
+
+.literalM2
+{   
+    display: table;
+    color:White;
+    height: 35px;
+    text-align: center;
+    text-indent: 15px;
+    font-size:medium;
+}
+
+.cuadrado {
+    border-radius: 0
+}
+.sinBorde
+{
+    border-width:0;
+}
+span {
+  display: table-cell;
+  vertical-align: middle;
+}
+.saltoLineaM 
+{
+    height: 15px;
+}
+.saltoLineaS
+{    height: 2px;
+}
+.cambioColorNaranja
+{
+    border-left: 5px solid #ED6B64;
+}
+
+.cambioColorCeleste
+{
+    border-left: 5px solid #00ADEE;
+}
+.botonxxl
+{
+    font-size: 12px;
+}
+h5
+{
+    color: #000000;
+}
+
+input[type="checkbox"]{
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+}
+
+blockquote{
+  margin: 20px 0;
+  padding-left: 1.5rem;
+  border-left: 5px solid #42BAB2; 
+}
+
+.menu { 
+    /*font-family:Verdana;*/
+    font-size: 12px;
+    color: #000000;
+    text-align: center;
+    text-decoration: none;
+    border: #B1B1B1 solid; 
+    border-width: 0px 1px 0px 0px;
+    padding: 10px 17px 10px 12px;
+    display:inline-block;
+}
+
+.menu:link,.menu:visited {
+    background-color: #E5E5E5;
+}
+
+.menu:hover,.menu:active {
+    background-color:#F9C232;
+}

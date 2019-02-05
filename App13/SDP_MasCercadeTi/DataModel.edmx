@@ -1,0 +1,520 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="SDP_ActualizacionDatosModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="SDP_ActualizacionDatosModelStoreContainer">
+          <EntitySet Name="SDP_Catalogo" EntityType="SDP_ActualizacionDatosModel.Store.SDP_Catalogo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SDP_MasCercadeTi" EntityType="SDP_ActualizacionDatosModel.Store.SDP_MasCercadeTi" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SDP_TipoCatalogo" EntityType="SDP_ActualizacionDatosModel.Store.SDP_TipoCatalogo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SDP_Usuario" EntityType="SDP_ActualizacionDatosModel.Store.SDP_Usuario" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SDP_Catalogo_VTA" EntityType="SDP_ActualizacionDatosModel.Store.SDP_Catalogo_VTA" store:Type="Views" store:Schema="dbo" store:Name="SDP_Catalogo_VTA">
+            <DefiningQuery>SELECT 
+      [SDP_Catalogo_VTA].[CatalogoID] AS [CatalogoID], 
+      [SDP_Catalogo_VTA].[TipoCatalogoID] AS [TipoCatalogoID], 
+      [SDP_Catalogo_VTA].[Nombre] AS [Nombre], 
+      [SDP_Catalogo_VTA].[Var1] AS [Var1], 
+      [SDP_Catalogo_VTA].[Var2] AS [Var2], 
+      [SDP_Catalogo_VTA].[Var3] AS [Var3], 
+      [SDP_Catalogo_VTA].[Var4] AS [Var4], 
+      [SDP_Catalogo_VTA].[Var5] AS [Var5], 
+      [SDP_Catalogo_VTA].[Orden] AS [Orden], 
+      [SDP_Catalogo_VTA].[Activo] AS [Activo], 
+      [SDP_Catalogo_VTA].[TipoCatalogo] AS [TipoCatalogo]
+      FROM [dbo].[SDP_Catalogo_VTA] AS [SDP_Catalogo_VTA]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_SDP_Catalogo_SDP_TipoCatalogo" Association="SDP_ActualizacionDatosModel.Store.FK_SDP_Catalogo_SDP_TipoCatalogo">
+            <End Role="SDP_TipoCatalogo" EntitySet="SDP_TipoCatalogo" />
+            <End Role="SDP_Catalogo" EntitySet="SDP_Catalogo" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="SDP_Catalogo">
+          <Key>
+            <PropertyRef Name="CatalogoID" />
+          </Key>
+          <Property Name="CatalogoID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="TipoCatalogoID" Type="uniqueidentifier" />
+          <Property Name="Nombre" Type="varchar" MaxLength="500" />
+          <Property Name="Var1" Type="varchar" MaxLength="500" />
+          <Property Name="Var2" Type="varchar" MaxLength="500" />
+          <Property Name="Var3" Type="varchar" MaxLength="500" />
+          <Property Name="Var4" Type="varchar" MaxLength="500" />
+          <Property Name="Var5" Type="varchar" MaxLength="500" />
+          <Property Name="Orden" Type="int" />
+          <Property Name="Activo" Type="bit" />
+        </EntityType>
+        <EntityType Name="SDP_MasCercadeTi">
+          <Key>
+            <PropertyRef Name="RegistroID" />
+          </Key>
+          <Property Name="RegistroID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="FechaRegistro" Type="datetime" />
+          <Property Name="FechaActualizacion" Type="datetime" />
+          <Property Name="UsuarioRegistro" Type="uniqueidentifier" />
+          <Property Name="UsuarioActualizacion" Type="uniqueidentifier" />
+          <Property Name="Nombres" Type="varchar" MaxLength="500" />
+          <Property Name="Apellidos" Type="varchar" MaxLength="500" />
+          <Property Name="Identificacion" Type="varchar" MaxLength="100" />
+          <Property Name="Sexo" Type="uniqueidentifier" />
+          <Property Name="SexoNombre" Type="varchar" MaxLength="500" />
+          <Property Name="FechaNacimiento" Type="datetime" />
+          <Property Name="EstadoCivil" Type="uniqueidentifier" />
+          <Property Name="EstadoCivilNombre" Type="varchar" MaxLength="500" />
+          <Property Name="Telefono" Type="varchar" MaxLength="100" />
+          <Property Name="Celular" Type="varchar" MaxLength="100" />
+          <Property Name="EmailLaboral" Type="varchar" MaxLength="100" />
+          <Property Name="EmailPersonal" Type="varchar" MaxLength="100" />
+          <Property Name="Empresa" Type="varchar" MaxLength="500" />
+          <Property Name="Direccion" Type="varchar" MaxLength="500" />
+          <Property Name="Ciudad" Type="uniqueidentifier" />
+          <Property Name="CiudadNombre" Type="varchar" MaxLength="500" />
+          <Property Name="Cargo" Type="varchar" MaxLength="100" />
+          <Property Name="AniversarioEmpresa" Type="datetime" />
+          <Property Name="Deporte" Type="uniqueidentifier" />
+          <Property Name="DeporteNombre" Type="varchar" MaxLength="500" />
+          <Property Name="ActividadesInteres" Type="uniqueidentifier" />
+          <Property Name="ActividadesInteresNombre" Type="varchar" MaxLength="500" />
+          <Property Name="Hincha" Type="uniqueidentifier" />
+          <Property Name="HinchaNombre" Type="varchar" MaxLength="500" />
+          <Property Name="GeneroMusical" Type="uniqueidentifier" />
+          <Property Name="GeneroMusicalNombre" Type="varchar" MaxLength="500" />
+          <Property Name="GeneroCine" Type="uniqueidentifier" />
+          <Property Name="GeneroCineNombre" Type="varchar" MaxLength="500" />
+          <Property Name="GeneroLiteratura" Type="uniqueidentifier" />
+          <Property Name="GeneroLiteraturaNombre" Type="varchar" MaxLength="500" />
+          <Property Name="ComidaFavorita" Type="uniqueidentifier" />
+          <Property Name="ComidaFavoritaNombre" Type="varchar" MaxLength="500" />
+          <Property Name="NacimientoConyuge" Type="datetime" />
+          <Property Name="FechaAniversario" Type="datetime" />
+          <Property Name="NumeroHijos" Type="int" />
+          <Property Name="SexoHijo1" Type="uniqueidentifier" />
+          <Property Name="SexoHijo1Nombre" Type="varchar" MaxLength="500" />
+          <Property Name="FechaHijo1" Type="datetime" />
+          <Property Name="SexoHijo2" Type="uniqueidentifier" />
+          <Property Name="SexoHijo2Nombre" Type="varchar" MaxLength="500" />
+          <Property Name="FechaHijo2" Type="datetime" />
+          <Property Name="SexoHijo3" Type="uniqueidentifier" />
+          <Property Name="SexoHijo3Nombre" Type="varchar" MaxLength="500" />
+          <Property Name="FechaHijo3" Type="datetime" />
+          <Property Name="SexoHijo4" Type="uniqueidentifier" />
+          <Property Name="SexoHijo4Nombre" Type="varchar" MaxLength="500" />
+          <Property Name="FechaHijo4" Type="datetime" />
+          <Property Name="SexoHijo5" Type="uniqueidentifier" />
+          <Property Name="SexoHijo5Nombre" Type="varchar" MaxLength="500" />
+          <Property Name="FechaHijo5" Type="datetime" />
+          <Property Name="SexoHijo6" Type="uniqueidentifier" />
+          <Property Name="SexoHijo6Nombre" Type="varchar" MaxLength="500" />
+          <Property Name="FechaHijo6" Type="datetime" />
+          <Property Name="SexoHijo7" Type="uniqueidentifier" />
+          <Property Name="SexoHijo7Nombre" Type="varchar" MaxLength="500" />
+          <Property Name="FechaHijo7" Type="datetime" />
+          <Property Name="SexoHijo8" Type="uniqueidentifier" />
+          <Property Name="SexoHijo8Nombre" Type="varchar" MaxLength="500" />
+          <Property Name="FechaHijo8" Type="datetime" />
+          <Property Name="SexoHijo9" Type="uniqueidentifier" />
+          <Property Name="SexoHijo9Nombre" Type="varchar" MaxLength="500" />
+          <Property Name="FechaHijo9" Type="datetime" />
+          <Property Name="SexoHijo10" Type="uniqueidentifier" />
+          <Property Name="SexoHijo10Nombre" Type="varchar" MaxLength="500" />
+          <Property Name="FechaHijo10" Type="datetime" />
+        </EntityType>
+        <EntityType Name="SDP_TipoCatalogo">
+          <Key>
+            <PropertyRef Name="TipoCatalogoID" />
+          </Key>
+          <Property Name="TipoCatalogoID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="SDP_Usuario">
+          <Key>
+            <PropertyRef Name="UsuarioID" />
+          </Key>
+          <Property Name="UsuarioID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="500" />
+          <Property Name="Username" Type="varchar" MaxLength="100" />
+          <Property Name="Password" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'SDP_ActualizacionDatos.dbo.SDP_Catalogo_VTA' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="SDP_Catalogo_VTA">
+          <Key>
+            <PropertyRef Name="CatalogoID" />
+          </Key>
+          <Property Name="CatalogoID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="TipoCatalogoID" Type="uniqueidentifier" />
+          <Property Name="Nombre" Type="varchar" MaxLength="500" />
+          <Property Name="Var1" Type="varchar" MaxLength="500" />
+          <Property Name="Var2" Type="varchar" MaxLength="500" />
+          <Property Name="Var3" Type="varchar" MaxLength="500" />
+          <Property Name="Var4" Type="varchar" MaxLength="500" />
+          <Property Name="Var5" Type="varchar" MaxLength="500" />
+          <Property Name="Orden" Type="int" />
+          <Property Name="Activo" Type="bit" />
+          <Property Name="TipoCatalogo" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <Association Name="FK_SDP_Catalogo_SDP_TipoCatalogo">
+          <End Role="SDP_TipoCatalogo" Type="SDP_ActualizacionDatosModel.Store.SDP_TipoCatalogo" Multiplicity="0..1" />
+          <End Role="SDP_Catalogo" Type="SDP_ActualizacionDatosModel.Store.SDP_Catalogo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SDP_TipoCatalogo">
+              <PropertyRef Name="TipoCatalogoID" />
+            </Principal>
+            <Dependent Role="SDP_Catalogo">
+              <PropertyRef Name="TipoCatalogoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="SDP_MasCercadeTi_Consulta" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Texto" Type="varchar" Mode="In" />
+          <Parameter Name="Genero" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="EstadoCivil" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="MesNacimiento" Type="int" Mode="In" />
+          <Parameter Name="Ciudad" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="MesAniversarioEmpresa" Type="int" Mode="In" />
+          <Parameter Name="Deporte" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="Hincha" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="GeneroCine" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="ComidaFavorita" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="GeneroMusical" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="GeneroLiteratura" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="ActividadesInteres" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="TieneHijos" Type="bit" Mode="In" />
+        </Function>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SDP_ActualizacionDatosModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="SDP_ActualizacionDatosEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="SDP_Catalogo" EntityType="SDP_ActualizacionDatosModel.SDP_Catalogo" />
+          <EntitySet Name="SDP_TipoCatalogo" EntityType="SDP_ActualizacionDatosModel.SDP_TipoCatalogo" />
+          <AssociationSet Name="FK_SDP_Catalogo_SDP_TipoCatalogo" Association="SDP_ActualizacionDatosModel.FK_SDP_Catalogo_SDP_TipoCatalogo">
+            <End Role="SDP_TipoCatalogo" EntitySet="SDP_TipoCatalogo" />
+            <End Role="SDP_Catalogo" EntitySet="SDP_Catalogo" />
+          </AssociationSet>
+          <EntitySet Name="SDP_Catalogo_VTA" EntityType="SDP_ActualizacionDatosModel.SDP_Catalogo_VTA" />
+          <EntitySet Name="SDP_MasCercadeTi" EntityType="SDP_ActualizacionDatosModel.SDP_MasCercadeTi" />
+          <EntitySet Name="SDP_Usuario" EntityType="SDP_ActualizacionDatosModel.SDP_Usuario" />
+          <FunctionImport Name="SDP_MasCercadeTi_Consulta" EntitySet="SDP_MasCercadeTi" ReturnType="Collection(SDP_ActualizacionDatosModel.SDP_MasCercadeTi)">
+            <Parameter Name="Texto" Mode="In" Type="String" />
+            <Parameter Name="Genero" Mode="In" Type="Guid" />
+            <Parameter Name="EstadoCivil" Mode="In" Type="Guid" />
+            <Parameter Name="MesNacimiento" Mode="In" Type="Int32" />
+            <Parameter Name="Ciudad" Mode="In" Type="Guid" />
+            <Parameter Name="MesAniversarioEmpresa" Mode="In" Type="Int32" />
+            <Parameter Name="Deporte" Mode="In" Type="Guid" />
+            <Parameter Name="Hincha" Mode="In" Type="Guid" />
+            <Parameter Name="GeneroCine" Mode="In" Type="Guid" />
+            <Parameter Name="ComidaFavorita" Mode="In" Type="Guid" />
+            <Parameter Name="GeneroMusical" Mode="In" Type="Guid" />
+            <Parameter Name="GeneroLiteratura" Mode="In" Type="Guid" />
+            <Parameter Name="ActividadesInteres" Mode="In" Type="Guid" />
+            <Parameter Name="TieneHijos" Mode="In" Type="Boolean" />
+          </FunctionImport>
+        </EntityContainer>
+        <EntityType Name="SDP_Catalogo">
+          <Key>
+            <PropertyRef Name="CatalogoID" />
+          </Key>
+          <Property Name="CatalogoID" Type="Guid" Nullable="false" />
+          <Property Name="TipoCatalogoID" Type="Guid" />
+          <Property Name="Nombre" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="Var1" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="Var2" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="Var3" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="Var4" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="Var5" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="Orden" Type="Int32" />
+          <Property Name="Activo" Type="Boolean" />
+          <NavigationProperty Name="SDP_TipoCatalogo" Relationship="SDP_ActualizacionDatosModel.FK_SDP_Catalogo_SDP_TipoCatalogo" FromRole="SDP_Catalogo" ToRole="SDP_TipoCatalogo" />
+        </EntityType>
+        <EntityType Name="SDP_TipoCatalogo">
+          <Key>
+            <PropertyRef Name="TipoCatalogoID" />
+          </Key>
+          <Property Name="TipoCatalogoID" Type="Guid" Nullable="false" />
+          <Property Name="Nombre" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="SDP_Catalogo" Relationship="SDP_ActualizacionDatosModel.FK_SDP_Catalogo_SDP_TipoCatalogo" FromRole="SDP_TipoCatalogo" ToRole="SDP_Catalogo" />
+        </EntityType>
+        <Association Name="FK_SDP_Catalogo_SDP_TipoCatalogo">
+          <End Role="SDP_TipoCatalogo" Type="SDP_ActualizacionDatosModel.SDP_TipoCatalogo" Multiplicity="0..1" />
+          <End Role="SDP_Catalogo" Type="SDP_ActualizacionDatosModel.SDP_Catalogo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SDP_TipoCatalogo">
+              <PropertyRef Name="TipoCatalogoID" />
+            </Principal>
+            <Dependent Role="SDP_Catalogo">
+              <PropertyRef Name="TipoCatalogoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="SDP_Catalogo_VTA">
+          <Key>
+            <PropertyRef Name="CatalogoID" />
+          </Key>
+          <Property Type="Guid" Name="CatalogoID" Nullable="false" />
+          <Property Type="Guid" Name="TipoCatalogoID" />
+          <Property Type="String" Name="Nombre" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Var1" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Var2" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Var3" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Var4" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Var5" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Orden" />
+          <Property Type="Boolean" Name="Activo" />
+          <Property Type="String" Name="TipoCatalogo" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="SDP_MasCercadeTi">
+          <Key>
+            <PropertyRef Name="RegistroID" />
+          </Key>
+          <Property Type="Guid" Name="RegistroID" Nullable="false" />
+          <Property Type="DateTime" Name="FechaRegistro" />
+          <Property Type="DateTime" Name="FechaActualizacion" />
+          <Property Type="Guid" Name="UsuarioRegistro" />
+          <Property Type="Guid" Name="UsuarioActualizacion" />
+          <Property Type="String" Name="Nombres" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Apellidos" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Identificacion" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Guid" Name="Sexo" />
+          <Property Type="String" Name="SexoNombre" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FechaNacimiento" />
+          <Property Type="Guid" Name="EstadoCivil" />
+          <Property Type="String" Name="EstadoCivilNombre" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Telefono" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Celular" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="EmailLaboral" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="EmailPersonal" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Empresa" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Direccion" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="Guid" Name="Ciudad" />
+          <Property Type="String" Name="CiudadNombre" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Cargo" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="AniversarioEmpresa" />
+          <Property Type="Guid" Name="Deporte" />
+          <Property Type="String" Name="DeporteNombre" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="Guid" Name="ActividadesInteres" />
+          <Property Type="String" Name="ActividadesInteresNombre" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="Guid" Name="Hincha" />
+          <Property Type="String" Name="HinchaNombre" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="Guid" Name="GeneroMusical" />
+          <Property Type="String" Name="GeneroMusicalNombre" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="Guid" Name="GeneroCine" />
+          <Property Type="String" Name="GeneroCineNombre" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="Guid" Name="GeneroLiteratura" />
+          <Property Type="String" Name="GeneroLiteraturaNombre" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="Guid" Name="ComidaFavorita" />
+          <Property Type="String" Name="ComidaFavoritaNombre" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="NacimientoConyuge" />
+          <Property Type="DateTime" Name="FechaAniversario" />
+          <Property Type="Int32" Name="NumeroHijos" />
+          <Property Type="Guid" Name="SexoHijo1" />
+          <Property Type="String" Name="SexoHijo1Nombre" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FechaHijo1" />
+          <Property Type="Guid" Name="SexoHijo2" />
+          <Property Type="String" Name="SexoHijo2Nombre" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FechaHijo2" />
+          <Property Type="Guid" Name="SexoHijo3" />
+          <Property Type="String" Name="SexoHijo3Nombre" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FechaHijo3" />
+          <Property Type="Guid" Name="SexoHijo4" />
+          <Property Type="String" Name="SexoHijo4Nombre" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FechaHijo4" />
+          <Property Type="Guid" Name="SexoHijo5" />
+          <Property Type="String" Name="SexoHijo5Nombre" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FechaHijo5" />
+          <Property Type="Guid" Name="SexoHijo6" />
+          <Property Type="String" Name="SexoHijo6Nombre" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FechaHijo6" />
+          <Property Type="Guid" Name="SexoHijo7" />
+          <Property Type="String" Name="SexoHijo7Nombre" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FechaHijo7" />
+          <Property Type="Guid" Name="SexoHijo8" />
+          <Property Type="String" Name="SexoHijo8Nombre" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FechaHijo8" />
+          <Property Type="Guid" Name="SexoHijo9" />
+          <Property Type="String" Name="SexoHijo9Nombre" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FechaHijo9" />
+          <Property Type="Guid" Name="SexoHijo10" />
+          <Property Type="String" Name="SexoHijo10Nombre" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FechaHijo10" />
+        </EntityType>
+        <EntityType Name="SDP_Usuario">
+          <Key>
+            <PropertyRef Name="UsuarioID" />
+          </Key>
+          <Property Type="Guid" Name="UsuarioID" Nullable="false" />
+          <Property Type="String" Name="Nombre" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Username" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Password" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SDP_ActualizacionDatosModelStoreContainer" CdmEntityContainer="SDP_ActualizacionDatosEntities">
+          <EntitySetMapping Name="SDP_Catalogo">
+            <EntityTypeMapping TypeName="SDP_ActualizacionDatosModel.SDP_Catalogo">
+              <MappingFragment StoreEntitySet="SDP_Catalogo">
+                <ScalarProperty Name="CatalogoID" ColumnName="CatalogoID" />
+                <ScalarProperty Name="TipoCatalogoID" ColumnName="TipoCatalogoID" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Var1" ColumnName="Var1" />
+                <ScalarProperty Name="Var2" ColumnName="Var2" />
+                <ScalarProperty Name="Var3" ColumnName="Var3" />
+                <ScalarProperty Name="Var4" ColumnName="Var4" />
+                <ScalarProperty Name="Var5" ColumnName="Var5" />
+                <ScalarProperty Name="Orden" ColumnName="Orden" />
+                <ScalarProperty Name="Activo" ColumnName="Activo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SDP_TipoCatalogo">
+            <EntityTypeMapping TypeName="SDP_ActualizacionDatosModel.SDP_TipoCatalogo">
+              <MappingFragment StoreEntitySet="SDP_TipoCatalogo">
+                <ScalarProperty Name="TipoCatalogoID" ColumnName="TipoCatalogoID" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SDP_Catalogo_VTA">
+            <EntityTypeMapping TypeName="SDP_ActualizacionDatosModel.SDP_Catalogo_VTA">
+              <MappingFragment StoreEntitySet="SDP_Catalogo_VTA">
+                <ScalarProperty Name="TipoCatalogo" ColumnName="TipoCatalogo" />
+                <ScalarProperty Name="Activo" ColumnName="Activo" />
+                <ScalarProperty Name="Orden" ColumnName="Orden" />
+                <ScalarProperty Name="Var5" ColumnName="Var5" />
+                <ScalarProperty Name="Var4" ColumnName="Var4" />
+                <ScalarProperty Name="Var3" ColumnName="Var3" />
+                <ScalarProperty Name="Var2" ColumnName="Var2" />
+                <ScalarProperty Name="Var1" ColumnName="Var1" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="TipoCatalogoID" ColumnName="TipoCatalogoID" />
+                <ScalarProperty Name="CatalogoID" ColumnName="CatalogoID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SDP_MasCercadeTi">
+            <EntityTypeMapping TypeName="SDP_ActualizacionDatosModel.SDP_MasCercadeTi">
+              <MappingFragment StoreEntitySet="SDP_MasCercadeTi">
+                <ScalarProperty Name="FechaHijo10" ColumnName="FechaHijo10" />
+                <ScalarProperty Name="SexoHijo10Nombre" ColumnName="SexoHijo10Nombre" />
+                <ScalarProperty Name="SexoHijo10" ColumnName="SexoHijo10" />
+                <ScalarProperty Name="FechaHijo9" ColumnName="FechaHijo9" />
+                <ScalarProperty Name="SexoHijo9Nombre" ColumnName="SexoHijo9Nombre" />
+                <ScalarProperty Name="SexoHijo9" ColumnName="SexoHijo9" />
+                <ScalarProperty Name="FechaHijo8" ColumnName="FechaHijo8" />
+                <ScalarProperty Name="SexoHijo8Nombre" ColumnName="SexoHijo8Nombre" />
+                <ScalarProperty Name="SexoHijo8" ColumnName="SexoHijo8" />
+                <ScalarProperty Name="FechaHijo7" ColumnName="FechaHijo7" />
+                <ScalarProperty Name="SexoHijo7Nombre" ColumnName="SexoHijo7Nombre" />
+                <ScalarProperty Name="SexoHijo7" ColumnName="SexoHijo7" />
+                <ScalarProperty Name="FechaHijo6" ColumnName="FechaHijo6" />
+                <ScalarProperty Name="SexoHijo6Nombre" ColumnName="SexoHijo6Nombre" />
+                <ScalarProperty Name="SexoHijo6" ColumnName="SexoHijo6" />
+                <ScalarProperty Name="FechaHijo5" ColumnName="FechaHijo5" />
+                <ScalarProperty Name="SexoHijo5Nombre" ColumnName="SexoHijo5Nombre" />
+                <ScalarProperty Name="SexoHijo5" ColumnName="SexoHijo5" />
+                <ScalarProperty Name="FechaHijo4" ColumnName="FechaHijo4" />
+                <ScalarProperty Name="SexoHijo4Nombre" ColumnName="SexoHijo4Nombre" />
+                <ScalarProperty Name="SexoHijo4" ColumnName="SexoHijo4" />
+                <ScalarProperty Name="FechaHijo3" ColumnName="FechaHijo3" />
+                <ScalarProperty Name="SexoHijo3Nombre" ColumnName="SexoHijo3Nombre" />
+                <ScalarProperty Name="SexoHijo3" ColumnName="SexoHijo3" />
+                <ScalarProperty Name="FechaHijo2" ColumnName="FechaHijo2" />
+                <ScalarProperty Name="SexoHijo2Nombre" ColumnName="SexoHijo2Nombre" />
+                <ScalarProperty Name="SexoHijo2" ColumnName="SexoHijo2" />
+                <ScalarProperty Name="FechaHijo1" ColumnName="FechaHijo1" />
+                <ScalarProperty Name="SexoHijo1Nombre" ColumnName="SexoHijo1Nombre" />
+                <ScalarProperty Name="SexoHijo1" ColumnName="SexoHijo1" />
+                <ScalarProperty Name="NumeroHijos" ColumnName="NumeroHijos" />
+                <ScalarProperty Name="FechaAniversario" ColumnName="FechaAniversario" />
+                <ScalarProperty Name="NacimientoConyuge" ColumnName="NacimientoConyuge" />
+                <ScalarProperty Name="ComidaFavoritaNombre" ColumnName="ComidaFavoritaNombre" />
+                <ScalarProperty Name="ComidaFavorita" ColumnName="ComidaFavorita" />
+                <ScalarProperty Name="GeneroLiteraturaNombre" ColumnName="GeneroLiteraturaNombre" />
+                <ScalarProperty Name="GeneroLiteratura" ColumnName="GeneroLiteratura" />
+                <ScalarProperty Name="GeneroCineNombre" ColumnName="GeneroCineNombre" />
+                <ScalarProperty Name="GeneroCine" ColumnName="GeneroCine" />
+                <ScalarProperty Name="GeneroMusicalNombre" ColumnName="GeneroMusicalNombre" />
+                <ScalarProperty Name="GeneroMusical" ColumnName="GeneroMusical" />
+                <ScalarProperty Name="HinchaNombre" ColumnName="HinchaNombre" />
+                <ScalarProperty Name="Hincha" ColumnName="Hincha" />
+                <ScalarProperty Name="ActividadesInteresNombre" ColumnName="ActividadesInteresNombre" />
+                <ScalarProperty Name="ActividadesInteres" ColumnName="ActividadesInteres" />
+                <ScalarProperty Name="DeporteNombre" ColumnName="DeporteNombre" />
+                <ScalarProperty Name="Deporte" ColumnName="Deporte" />
+                <ScalarProperty Name="AniversarioEmpresa" ColumnName="AniversarioEmpresa" />
+                <ScalarProperty Name="Cargo" ColumnName="Cargo" />
+                <ScalarProperty Name="CiudadNombre" ColumnName="CiudadNombre" />
+                <ScalarProperty Name="Ciudad" ColumnName="Ciudad" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="Empresa" ColumnName="Empresa" />
+                <ScalarProperty Name="EmailPersonal" ColumnName="EmailPersonal" />
+                <ScalarProperty Name="EmailLaboral" ColumnName="EmailLaboral" />
+                <ScalarProperty Name="Celular" ColumnName="Celular" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="EstadoCivilNombre" ColumnName="EstadoCivilNombre" />
+                <ScalarProperty Name="EstadoCivil" ColumnName="EstadoCivil" />
+                <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+                <ScalarProperty Name="SexoNombre" ColumnName="SexoNombre" />
+                <ScalarProperty Name="Sexo" ColumnName="Sexo" />
+                <ScalarProperty Name="Identificacion" ColumnName="Identificacion" />
+                <ScalarProperty Name="Apellidos" ColumnName="Apellidos" />
+                <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+                <ScalarProperty Name="UsuarioActualizacion" ColumnName="UsuarioActualizacion" />
+                <ScalarProperty Name="UsuarioRegistro" ColumnName="UsuarioRegistro" />
+                <ScalarProperty Name="FechaActualizacion" ColumnName="FechaActualizacion" />
+                <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+                <ScalarProperty Name="RegistroID" ColumnName="RegistroID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SDP_Usuario">
+            <EntityTypeMapping TypeName="SDP_ActualizacionDatosModel.SDP_Usuario">
+              <MappingFragment StoreEntitySet="SDP_Usuario">
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="UsuarioID" ColumnName="UsuarioID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="SDP_MasCercadeTi_Consulta" FunctionName="SDP_ActualizacionDatosModel.Store.SDP_MasCercadeTi_Consulta" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="DataModel" ZoomLevel="114">
+        <EntityTypeShape EntityType="SDP_ActualizacionDatosModel.SDP_Catalogo" Width="1.5" PointX="3" PointY="1" Height="3.1340950520833331" IsExpanded="true" />
+        <EntityTypeShape EntityType="SDP_ActualizacionDatosModel.SDP_TipoCatalogo" Width="1.5" PointX="0.75" PointY="1.75" Height="1.5956835937499996" IsExpanded="true" />
+        <AssociationConnector Association="SDP_ActualizacionDatosModel.FK_SDP_Catalogo_SDP_TipoCatalogo" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="2.547841796875" />
+          <ConnectorPoint PointX="3" PointY="2.547841796875" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="SDP_ActualizacionDatosModel.SDP_Catalogo_VTA" Width="1.5" PointX="5.375" PointY="0.75" Height="3.1340950520833335" />
+        <EntityTypeShape EntityType="SDP_ActualizacionDatosModel.SDP_MasCercadeTi" Width="1.5" PointX="0.75" PointY="5.75" Height="14.479879557291667" />
+        <EntityTypeShape EntityType="SDP_ActualizacionDatosModel.SDP_Usuario" Width="1.5" PointX="3.375" PointY="5.75" Height="1.7879850260416674" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

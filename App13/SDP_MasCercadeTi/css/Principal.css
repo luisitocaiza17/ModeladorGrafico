@@ -1,0 +1,19 @@
+﻿
+body
+{
+    background: #E2E3E4;
+    font-family: "Arial, Helvetica, Verdana, sans-serif";
+    margin: 0px;
+    padding: 0px;
+    color: #999999;
+}
+
+#fondo
+{
+    width: 70%;
+    min-width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #F3F3F3;
+    margin-bottom: 10px;
+}
